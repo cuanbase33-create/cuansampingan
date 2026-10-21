@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --color-navy: #0D1B2A;
+    --color-navy-light: #162436;
+    --color-gold: #F5C518;
+    --color-gold-dark: #D4A90E;
+    --color-teal: #1DB89A;
+    --color-teal-dark: #17967E;
+    --color-white: #FFFFFF;
+    --color-gray-soft: #A8B8C8;
+    --color-gray-border: #1E2F42;
+    --color-danger: #E05252;
+    --color-success: #2ECC71;
+}
