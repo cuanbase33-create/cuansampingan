@@ -99,7 +99,7 @@
 @endsection
 
 @section('scripts')
-<script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/super-build/ckeditor.js"></script>
 <style>
     .ck-editor__editable_inline {
         min-height: 400px;
@@ -107,9 +107,39 @@
     }
 </style>
 <script>
-    ClassicEditor
+    CKEDITOR.ClassicEditor
         .create(document.querySelector('#body'), {
-            toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote', 'insertTable', 'undo', 'redo' ]
+            toolbar: {
+                items: [
+                    'heading', '|',
+                    'bold', 'italic', 'underline', '|',
+                    'alignment', '|',
+                    'link', 'bulletedList', 'numberedList', 'blockQuote', 'insertTable', '|',
+                    'undo', 'redo'
+                ],
+                shouldNotGroupWhenFull: true
+            },
+            alignment: {
+                options: ['left', 'center', 'right', 'justify']
+            },
+            removePlugins: [
+                'CKBox',
+                'CKFinder',
+                'EasyImage',
+                'RealTimeCollaborativeComments',
+                'RealTimeCollaborativeTrackChanges',
+                'RealTimeCollaborativeRevisionHistory',
+                'PresenceList',
+                'Comments',
+                'TrackChanges',
+                'TrackChangesData',
+                'RevisionHistory',
+                'Pagination',
+                'WProofreader',
+                'ExportPdf',
+                'ExportWord',
+                'AIAssistant'
+            ]
         })
         .catch(error => {
             console.error(error);

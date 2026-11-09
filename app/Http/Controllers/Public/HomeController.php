@@ -46,7 +46,6 @@ class HomeController extends Controller
             'platformCategories', 
             'latestArticles', 
             'latestBooks', 
-            'latestTutorials',
             'latestResources', 
             'latestProducts'
         ));

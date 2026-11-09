@@ -57,7 +57,7 @@
                                 <a href="{{ route('artikel.show', $pop->slug) }}" class="flex items-start group">
                                     <div class="w-16 h-16 rounded flex-shrink-0 bg-navy overflow-hidden">
                                         @if($pop->thumbnail)
-                                            <img src="{{ Storage::url($pop->thumbnail) }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                                            <img src="{{ (Str::startsWith($pop->thumbnail, 'http://') || Str::startsWith($pop->thumbnail, 'https://')) ? $pop->thumbnail : Storage::url($pop->thumbnail) }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
                                         @endif
                                     </div>
                                     <div class="ml-4 flex-grow">
@@ -80,7 +80,7 @@
                                 <a href="{{ route('artikel.show', $latest->slug) }}" class="flex items-start group">
                                     <div class="w-16 h-16 rounded flex-shrink-0 bg-navy overflow-hidden">
                                         @if($latest->thumbnail)
-                                            <img src="{{ Storage::url($latest->thumbnail) }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                                            <img src="{{ (Str::startsWith($latest->thumbnail, 'http://') || Str::startsWith($latest->thumbnail, 'https://')) ? $latest->thumbnail : Storage::url($latest->thumbnail) }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
                                         @endif
                                     </div>
                                     <div class="ml-4 flex-grow">

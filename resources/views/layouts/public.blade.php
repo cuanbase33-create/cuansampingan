@@ -85,7 +85,6 @@
                     </div>
 
                     <a href="{{ route('artikel.index') }}" class="{{ request()->routeIs('artikel.*') ? 'text-gold' : 'text-gray-300 hover:text-white' }} px-3 py-2 text-sm font-medium transition">Artikel</a>
-                    <a href="{{ route('tutorial.index') }}" class="{{ request()->routeIs('tutorial.*') ? 'text-gold' : 'text-gray-300 hover:text-white' }} px-3 py-2 text-sm font-medium transition">Tutorial</a>
                     <a href="{{ route('bacaan.index') }}" class="{{ request()->routeIs('bacaan.*') ? 'text-gold' : 'text-gray-300 hover:text-white' }} px-3 py-2 text-sm font-medium transition">Bacaan Rekomendasi</a>
                     <a href="{{ route('free-resources.index') }}" class="{{ request()->routeIs('free-resources.*') ? 'text-gold' : 'text-gray-300 hover:text-white' }} px-3 py-2 text-sm font-medium transition">Free Resources</a>
                     <a href="{{ route('digital-product.index') }}" class="{{ request()->routeIs('digital-product.*') ? 'text-gold' : 'text-gray-300 hover:text-white' }} px-3 py-2 text-sm font-medium transition">Digital Product</a>
@@ -110,7 +109,6 @@
                                 </a>
                             @endforeach
                             <a href="{{ route('artikel.index') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-navy-light hover:text-white">Artikel</a>
-                            <a href="{{ route('tutorial.index') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-navy-light hover:text-white">Tutorial</a>
                             <a href="{{ route('bacaan.index') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-navy-light hover:text-white">Bacaan Rekomendasi</a>
                             <a href="{{ route('free-resources.index') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-navy-light hover:text-white">Free Resources</a>
                             <a href="{{ route('digital-product.index') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-navy-light hover:text-white">Digital Product</a>
@@ -142,7 +140,6 @@
                     <ul class="mt-4 space-y-2">
                         <li><a href="{{ route('home') }}" class="text-base text-gray-soft hover:text-white transition">Home</a></li>
                         <li><a href="{{ route('artikel.index') }}" class="text-base text-gray-soft hover:text-white transition">Artikel</a></li>
-                        <li><a href="{{ route('tutorial.index') }}" class="text-base text-gray-soft hover:text-white transition">Tutorial</a></li>
                         <li><a href="{{ route('bacaan.index') }}" class="text-base text-gray-soft hover:text-white transition">Rekomendasi</a></li>
                     </ul>
                 </div>

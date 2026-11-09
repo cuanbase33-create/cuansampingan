@@ -151,7 +151,7 @@ class AdminAuthController extends Controller
                 return redirect()->route('admin.2fa')->withErrors(['otp' => 'Sesi setup 2FA telah kadaluarsa. Silakan coba lagi.']);
             }
 
-            if ($google2fa->verifyKey($secret, $otp)) {
+            if ($google2fa->verifyKey($secret, $otp, 2)) {
                 RateLimiter::clear($throttleKey);
 
                 $admin->two_factor_secret = $secret;
@@ -171,7 +171,7 @@ class AdminAuthController extends Controller
                 return back()->withErrors(['otp' => 'Kode OTP sudah pernah digunakan. Mohon tunggu kode berikutnya.']);
             }
 
-            if ($google2fa->verifyKey($admin->two_factor_secret, $otp)) {
+            if ($google2fa->verifyKey($admin->two_factor_secret, $otp, 2)) {
                 RateLimiter::clear($throttleKey);
                 // Mark this OTP as used for 120 seconds
                 Cache::put($replayCacheKey, true, 120);

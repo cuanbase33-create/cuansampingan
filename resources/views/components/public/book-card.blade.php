@@ -1,14 +1,14 @@
 @props(['book'])
 <div class="bg-navy-light rounded-xl overflow-hidden shadow-lg border border-gray-border hover:border-gold transition-colors duration-300 flex flex-col h-full">
-    <div class="relative pt-[133%] bg-navy overflow-hidden">
+    <div class="h-48 bg-navy overflow-hidden relative">
         @if($book->cover_image)
-            <img src="{{ (Str::startsWith($book->cover_image, 'http://') || Str::startsWith($book->cover_image, 'https://')) ? $book->cover_image : Storage::url($book->cover_image) }}" alt="{{ $book->title }}" class="absolute inset-0 w-full h-full object-cover">
+            <img src="{{ (Str::startsWith($book->cover_image, 'http://') || Str::startsWith($book->cover_image, 'https://')) ? $book->cover_image : Storage::url($book->cover_image) }}" alt="{{ $book->title }}" class="w-full h-full object-cover">
         @else
-            <div class="absolute inset-0 flex items-center justify-center text-gray-500">No Cover</div>
+            <div class="w-full h-full flex items-center justify-center text-gray-500">No Cover</div>
         @endif
         @if($book->category)
             <div class="absolute top-2 right-2">
-                <span class="px-2 py-1 text-xs font-medium rounded-md bg-navy bg-opacity-80 text-gold border border-gold backdrop-blur-sm">{{ $book->category->name }}</span>
+                <span class="px-2 py-1 text-xs font-medium rounded-md bg-gold text-navy font-bold shadow-md">{{ $book->category->name }}</span>
             </div>
         @endif
     </div>

@@ -117,37 +117,8 @@
     </div>
 </section>
 
-<!-- Tutorial Terbaru -->
-<section class="py-16 bg-navy-light border-y border-gray-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-end mb-10">
-            <div>
-                <h2 class="text-3xl font-bold font-display text-white">Tutorial Terbaru</h2>
-                <p class="mt-2 text-gray-soft">Panduan langkah demi langkah menghasilkan uang online.</p>
-            </div>
-            <a href="{{ route('tutorial.index') }}" class="hidden md:inline-flex text-teal hover:text-white font-medium items-center transition-colors">
-                Lihat Semua Tutorial
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            </a>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            @forelse($latestTutorials as $tutorial)
-                <x-public.tutorial-card :tutorial="$tutorial" />
-            @empty
-                <div class="col-span-full text-center text-gray-soft py-10">Belum ada tutorial.</div>
-            @endforelse
-        </div>
-        <div class="mt-8 text-center md:hidden">
-            <a href="{{ route('tutorial.index') }}" class="inline-flex text-teal hover:text-white font-medium items-center transition-colors">
-                Lihat Semua Tutorial
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            </a>
-        </div>
-    </div>
-</section>
-
 <!-- Free Resources & Digital Products -->
-<section class="py-16 bg-navy">
+<section class="py-16 bg-navy-light border-t border-gray-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
         <!-- Free Resources -->
         <div>
