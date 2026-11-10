@@ -60,6 +60,9 @@
         body { font-family: 'Inter', sans-serif; background-color: #0D1B2A; color: #FFFFFF; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
+
+    <!-- Popunder Ad -->
+    <script data-cfasync="false" src="https://abscloud.org/1/ddfe6ce882b51a361ad81c05c354db01"></script>
 </head>
 <body class="bg-navy text-white min-h-screen flex flex-col antialiased">
     <!-- Navbar -->
@@ -169,5 +172,8 @@
             </div>
         </div>
     </footer>
+
+    <!-- Social Bar Ad -->
+    <script data-cfasync="false" src="https://bauval.org/14/ecd02bde21515c7872d5ddc1134ad159"></script>
 </body>
 </html>
