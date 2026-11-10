@@ -10,12 +10,12 @@
         <p class="text-gray-soft max-w-3xl mb-8">Kumpulan buku terbaik yang kami rekomendasikan untuk membantu perjalanan finansial dan bisnis online Anda.</p>
         
         <!-- Filter Kategori -->
-        <div class="flex overflow-x-auto pb-4 hide-scrollbar space-x-2">
-            <a href="{{ route('bacaan.index') }}" class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors border {{ !request()->has('kategori') ? 'bg-gold border-gold text-navy' : 'bg-transparent border-gray-border text-gray-300 hover:border-gold hover:text-white' }}">
+        <div class="flex flex-wrap gap-2">
+            <a href="{{ route('bacaan.index') }}" class="px-4 py-2 rounded-full text-sm font-medium transition-colors border {{ !request()->has('kategori') ? 'bg-gold border-gold text-navy' : 'bg-transparent border-gray-border text-gray-300 hover:border-gold hover:text-white' }}">
                 Semua Buku
             </a>
             @foreach($categories as $cat)
-                <a href="{{ route('bacaan.index', ['kategori' => $cat->slug]) }}" class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors border {{ request('kategori') == $cat->slug ? 'bg-gold border-gold text-navy' : 'bg-transparent border-gray-border text-gray-300 hover:border-gold hover:text-white' }}">
+                <a href="{{ route('bacaan.index', ['kategori' => $cat->slug]) }}" class="px-4 py-2 rounded-full text-sm font-medium transition-colors border {{ request('kategori') == $cat->slug ? 'bg-gold border-gold text-navy' : 'bg-transparent border-gray-border text-gray-300 hover:border-gold hover:text-white' }}">
                     {{ $cat->name }}
                 </a>
             @endforeach

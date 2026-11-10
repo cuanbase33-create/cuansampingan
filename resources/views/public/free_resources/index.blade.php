@@ -10,12 +10,12 @@
         <p class="text-gray-soft max-w-3xl mb-8">Kumpulan tools, template, dan sumber daya gratis yang siap Anda gunakan untuk memulai atau mengembangkan bisnis online.</p>
         
         <!-- Filter Kategori -->
-        <div class="flex overflow-x-auto pb-4 hide-scrollbar space-x-2">
-            <a href="{{ route('free-resources.index') }}" class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors border {{ !request()->has('kategori') ? 'bg-teal border-teal text-white' : 'bg-transparent border-gray-border text-gray-300 hover:border-teal hover:text-white' }}">
+        <div class="flex flex-wrap gap-2">
+            <a href="{{ route('free-resources.index') }}" class="px-4 py-2 rounded-full text-sm font-medium transition-colors border {{ !request()->has('kategori') ? 'bg-teal border-teal text-white' : 'bg-transparent border-gray-border text-gray-300 hover:border-teal hover:text-white' }}">
                 Semua Resources
             </a>
             @foreach($categories as $cat)
-                <a href="{{ route('free-resources.index', ['kategori' => $cat->slug]) }}" class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors border {{ request('kategori') == $cat->slug ? 'bg-teal border-teal text-white' : 'bg-transparent border-gray-border text-gray-300 hover:border-teal hover:text-white' }}">
+                <a href="{{ route('free-resources.index', ['kategori' => $cat->slug]) }}" class="px-4 py-2 rounded-full text-sm font-medium transition-colors border {{ request('kategori') == $cat->slug ? 'bg-teal border-teal text-white' : 'bg-transparent border-gray-border text-gray-300 hover:border-teal hover:text-white' }}">
                     {{ $cat->name }}
                 </a>
             @endforeach

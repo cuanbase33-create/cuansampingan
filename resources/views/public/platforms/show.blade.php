@@ -8,10 +8,10 @@
 <div class="bg-navy-light border-b border-gray-border pt-12 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Navigasi Kategori (Tabs) -->
-        <div class="flex overflow-x-auto pb-4 mb-8 hide-scrollbar space-x-2">
+        <div class="flex flex-wrap gap-2 mb-8">
             @foreach($allCategories as $cat)
                 <a href="{{ route('platform.show', $cat->slug) }}" 
-                   class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors border {{ request()->segment(2) == $cat->slug ? 'bg-gold border-gold text-navy' : 'bg-transparent border-gray-border text-gray-300 hover:border-gold hover:text-white' }}">
+                   class="px-4 py-2 rounded-full text-sm font-medium transition-colors border {{ request()->segment(2) == $cat->slug ? 'bg-gold border-gold text-navy' : 'bg-transparent border-gray-border text-gray-300 hover:border-gold hover:text-white' }}">
                     {{ $cat->name }}
                 </a>
             @endforeach

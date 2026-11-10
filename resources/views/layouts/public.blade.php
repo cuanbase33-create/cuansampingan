@@ -59,6 +59,8 @@
         [x-cloak] { display: none !important; }
         body { font-family: 'Inter', sans-serif; background-color: #0D1B2A; color: #FFFFFF; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 
     <!-- Popunder Ad -->
